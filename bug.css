@@ -1,0 +1,9 @@
+The CSS property `calc()` is used to perform calculations, but it can sometimes lead to unexpected results if the units are not consistent. For example, mixing percentages and pixels might result in incorrect layout or spacing.
+
+```css
+.element {
+  width: calc(50% + 20px);
+}
+```
+
+In this example, the width is calculated as 50% of the container plus 20 pixels. If the container's width changes, the calculation will adjust, but it might not behave as expected if the percentage and pixel values interact in unexpected ways.
