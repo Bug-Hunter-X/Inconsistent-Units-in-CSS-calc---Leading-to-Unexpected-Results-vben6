@@ -1,0 +1,26 @@
+To solve this, ensure consistent units are used within the `calc()` function.  One approach is to convert all units to a common unit (e.g., pixels) before performing the calculation:
+
+```css
+:root {
+  --container-width: 500px;
+}
+
+.element {
+  width: calc(var(--container-width) * 0.5 + 20px);
+}
+```
+
+This ensures that the calculation is performed using pixels only, resulting in a predictable outcome.  Alternatively, you could use variables to help manage the units and improve readability:
+
+```css
+:root {
+  --width-percentage: 50%;
+  --width-pixels: 20px;
+}
+
+.element {
+  width: calc(var(--width-percentage) + var(--width-pixels));
+}
+```
+
+Remember, the best approach depends on the context and your specific layout needs.
